@@ -6,19 +6,19 @@ import axios from "axios";
 
 const Dashboard = () => {
 
-    const [shipName, setShipName] = useState([]);
     const [movieInfo, setMovieInfo] =useState([]);
+    
 
     useEffect(() => {
         axios.get('https://swapi.dev/api/films/')
         .then((res) =>{
             let data= res.data.results;
 
-            let movieInfo = [];
+            let movies = [];
 
             for(let i = 0; i < data.length; i++){
                 
-                movieInfo.push({
+                movies.push({
                     name: data[i].title,
                     ep: data[i].episode_id,
                     intro: data[i].opening_crawl,
@@ -31,20 +31,28 @@ const Dashboard = () => {
                     starships: data[i].starships.length,
                     vehicles: data[i].starships.length,
                 })
-
-                
-
-                
             }
 
-            setMovieInfo(movieInfo)
-
+            setInterval(myTimer, 9000);
+            let counter = 0;
+            function myTimer() {
+                if (counter <= 5) {
+                    setMovieInfo(movies[counter]);
+                    counter++;
+                }else {
+                    counter = 1;
+                }
+                
+            }
             
 
             console.log (data)
-            console.log(movieInfo)
+            console.log(movies)
+
+            
         })
     }, [])
+
 
     return(
         <div className="dashboard-main">
@@ -54,18 +62,16 @@ const Dashboard = () => {
                     <option>vehicles</option>
                 </select>
                 <div className="info-con">
-                    <h1 className="title-text">Tatooine</h1>
-                    <p className="info-text">Population - 200000</p>
-                    <p className="description-text">
-                        Ever wonder how big some of the planets are?
-                        <br></br>How many people live on them?
-                        <br></br>What makes them special? 
-                    </p>
-                    
-                
+                    <h1 className="title-text">{movieInfo.name}</h1>
+                    <p className="info-text">Episode  - {movieInfo.ep}</p>
+                    <p className="description-text">{movieInfo.intro}</p>
+                    <p className="info-text">Release Date: {movieInfo.releaseDate}</p>                  
+                    <p className="info-text">Characters {movieInfo.character}</p>
+                    <p className="info-text">{movieInfo.species} Characters Species</p>                  
+                    <p className="info-text">Planets in the movie {movieInfo.planet}</p>
+                    <p className="info-text">Starships {movieInfo.starships}</p>
+                    <p className="info-text">Vehicles {movieInfo.vehicles}</p>
             </div>
-
-            
         </div>
          
         
