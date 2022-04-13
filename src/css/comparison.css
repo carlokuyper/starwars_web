@@ -1,0 +1,25 @@
+.comparison-main{
+    background-color: #141B21;
+    width: 100vw;
+    height: 92vh;
+    float: left;
+}
+  
+.dropdown-holder{
+    float: left;
+    width: 20%;
+    height: 70%;
+  
+    margin-top: 6%;
+    margin-left: 4%;
+    background-color: aqua;
+}
+ 
+.radar-holder{
+    float: right;
+    width: 30vw;
+    height: auto;
+    margin-top: 3%;
+    margin-right: 30%;
+    
+}

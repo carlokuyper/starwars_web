@@ -1,21 +1,8 @@
-// import { Carousel } from 'react-carousel-minimal';
 
-// function caroselTest (){
-//     const data = [
-//         {
-//             image: "https://images.unsplash.com/photo-1586861203927-800a5acdcc4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80",
-//             caption:"testing"
-//         },
-//         {
-//             image:"https://images.unsplash.com/photo-1601814933824-fd0b574dd592?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80",
-//             caption: "testing 2"
-//         }    
-//     ]
-// };
 
 const Dashboard = () => {
     return(
-        <div className="dashboard-main">
+        <div className="container-fluid dashboard-main">
             <div className="background-img">
                 <div className="info-con">
                     <h1 className="title-text">Tatooine</h1>
@@ -28,9 +15,7 @@ const Dashboard = () => {
                     <div className="page-button"><a  href="/Comparison">Comparison</a></div>
                 </div>
                 <div className="card-carousel">
-                    <div className="caroselTest">
-                        {/* <Carousel /> */}
-                    </div>
+                   
                 </div>
                 
             </div>

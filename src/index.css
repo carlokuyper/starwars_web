@@ -130,35 +130,6 @@ a {
 
 
 
-/* Comparison CSS */
-
-
-.comparison-main{
-  background-color: #141B21;
-  width: 100vw;
-  height: 92vh;
-  float: left;
-}
-
-.dropdown-holder{
-  float: left;
-  width: 20%;
-  height: 70%;
-
-  margin-top: 6%;
-  margin-left: 4%;
-  background-color: aqua;
-}
-
-.grahp-holder{
-  float: right;
-  width: 60%;
-  height: 70%;
-
-  margin-top: 6%;
-  margin-right: 10%;
-  background-color: blueviolet;
-}
 
 /* Timeline CSS */
 
