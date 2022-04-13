@@ -12,25 +12,27 @@ ChartJS.register(  CategoryScale,  LinearScale,  PointElement,  LineElement,  Ti
 
 const Timeline = () => {
 
-    const [shipName, setShipName] = useState([]);
-
+    const [releaseDate, setReleaseDate] = useState([]);
+    
     useEffect(() => {
         axios.get('https://swapi.dev/api/films')
         .then((res) =>{
             let data= res.data.results;
+
             for(let i = 0; i < data.length; i++){
                 
-                let shipN = data[i].release_date;
+                let RDate = data[i].release_date;
 
-                shipName.push(shipN)
+                releaseDate.push(RDate)
             }
 
-            setShipName(shipName)
-            console.log (data)
+            setReleaseDate(releaseDate);
+            console.log (data);
+            console.log (releaseDate);
         })
     })
     const data = {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        labels: releaseDate,
         datasets: [
           {
             label: "First dataset",
@@ -42,7 +44,7 @@ const Timeline = () => {
           {
             label: "Second dataset",
             data: [33, 25, 35, 51, 54, 76],
-            fill: false,
+            fill: true,
             borderColor: "#742774"
           }
         ]
