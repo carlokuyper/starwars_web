@@ -61,6 +61,8 @@ a {
   margin-top: 1.2%;
   text-align: center;
   bottom: 0;
+  width: 100vw;
+  position: absolute;
 }
 
 
