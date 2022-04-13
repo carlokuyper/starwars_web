@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/comparison.css'
+import '../css/dashboard.css'
 
 import {useState, useRef, useEffect } from 'react';
 import axios from "axios";
