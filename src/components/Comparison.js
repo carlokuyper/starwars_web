@@ -1,10 +1,10 @@
 import React from "react";
 import '../css/comparison.css'
 
-import 'chart.js/auto';
 import {useState, useRef, useEffect } from 'react';
 import axios from "axios";
 
+import 'chart.js/auto';
 import {  Chart as ChartJS,  RadialLinearScale,  PointElement,  LineElement,  Filler,  Tooltip,  Legend, } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 ChartJS.register(    RadialLinearScale,    PointElement,    LineElement,    Filler,    Tooltip,    Legend  );
@@ -43,6 +43,7 @@ const Comparison = () => {
           label: 'My First Dataset',
           data: [65, 59, 90, 81, 56, 55, 40],
           fill: true,
+          color: '#ffffff',
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgb(255, 99, 132)',
           pointBackgroundColor: 'rgb(255, 99, 132)',
@@ -66,7 +67,11 @@ const Comparison = () => {
     return(
         <div className="comparison-main">
             <div className="dropdown-holder">
-
+              <select className="starships" >
+                  <option>Starships</option>
+                  <option>vehicles</option>
+              </select>
+              
             </div>
 
             <div className="radar-holder">

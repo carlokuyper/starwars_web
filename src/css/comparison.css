@@ -9,7 +9,6 @@
     float: left;
     width: 20%;
     height: 70%;
-  
     margin-top: 6%;
     margin-left: 4%;
     background-color: aqua;
@@ -17,9 +16,15 @@
  
 .radar-holder{
     float: right;
-    width: 30vw;
+    width: 40vw;
     height: auto;
-    margin-top: 3%;
-    margin-right: 30%;
-    
+    margin-top: 5%;
+    margin-right: 25%;
+    background-color: white;
 }
+
+.starships{
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+  }

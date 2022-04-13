@@ -11,11 +11,6 @@ a {
   text-decoration: none;
 }
 
-/* .navigation{
-  background-color: rgba(0, 0, 0, 0.082);
-  height: 8vh;
-} */
-
 
 .navigation{
   background-color: #141B21;
@@ -126,27 +121,4 @@ a {
   height: 60%;
   float: right;
   margin-top: 10%;
-}
-
-
-
-
-/* Timeline CSS */
-
-
-.timeline-main{
-  background-color: #141B21;
-  width: 100vw;
-  height: 92vh;
-  float: left;
-}
-
-.timline-chart{
-  float: right;
-  width: 60%;
-  height: 70%;
-
-  margin-top: 6%;
-  margin-right: 10%;
-  background-color: darkgoldenrod;
 }

@@ -1,0 +1,15 @@
+.timeline-main{
+    background-color: #141B21;
+    width: 100vw;
+    height: 92vh;
+    float: left;
+  }
+  
+  .timline-chart{
+    float: right;
+      width: 65vw;
+      height: auto;
+      margin-top: 7%;
+      margin-right: 5%;
+      background-color: white;
+  }
