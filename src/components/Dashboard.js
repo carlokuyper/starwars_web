@@ -46,14 +46,8 @@ const Dashboard = () => {
                 }else {
                     counter = 0;
                 }
-                
             }
-            
         })
-        
-        
-            
-
             // console.log (data)
             // console.log(movies)
     }, [])
