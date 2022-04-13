@@ -1,11 +1,11 @@
-.comparison-main{
+.comparison-main {
     background-color: #141B21;
     width: 100vw;
     height: 92vh;
     float: left;
 }
-  
-.dropdown-holder{
+
+.dropdown-holder {
     float: left;
     width: 20%;
     height: 70%;
@@ -13,8 +13,8 @@
     margin-left: 4%;
     background-color: aqua;
 }
- 
-.radar-holder{
+
+.radar-holder {
     float: right;
     width: 30vw;
     height: 67vh;
@@ -23,8 +23,8 @@
     background-color: white;
 }
 
-.starships{
+.starships {
     width: 250px;
     height: 30px;
     margin-bottom: 10px;
-  }
+}

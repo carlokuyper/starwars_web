@@ -7,6 +7,25 @@ import axios from "axios";
 
 
 const ComparisonFilms = () => {
+
+    const [shipName, setShipName] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://swapi.dev/api/films/')
+        .then((res) =>{
+            let data= res.data.results;
+            for(let i = 0; i < data.length; i++){
+                
+                let shipN = data[i].name;
+
+                shipName.push(shipN)
+            }
+
+            setShipName(shipName)
+            console.log (data)
+        })
+    })
+
     return(
         <div className="comparison-main">
             <p>Testing Films</p>
