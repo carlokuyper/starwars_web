@@ -55,10 +55,12 @@ a {
 
 .comparisonNav{
   height: 8vh;
+  background-color: #141B21;
   float: left;
   margin-right: 6%;
   margin-top: 1.2%;
   text-align: center;
+  bottom: 0;
 }
 
 

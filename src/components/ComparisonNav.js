@@ -1,7 +1,7 @@
 
 const ComparisonNav = () => {
     return(
-        <div className="navigation">           
+                 
             <div className="comparisonNav">
                 <div className="nav-text"><a href="/ComparisonFilms">Films</a></div>
                 <div className="nav-text"><a href="/ComparisonPeople">People</a></div>
@@ -10,7 +10,7 @@ const ComparisonNav = () => {
                 <div className="nav-text"><a href="/ComparisonVehicles">Vehicles</a></div>
                 <div className="nav-text"><a href="/ComparisonStarships">Starships</a></div>
             </div>
-        </div>
+        
     );
 }
 
