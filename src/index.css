@@ -3,3 +3,179 @@ body {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5 , h5, p, a{
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .navigation{
+  background-color: rgba(0, 0, 0, 0.082);
+  height: 8vh;
+} */
+
+
+.navigation{
+  background-color: #141B21;
+  height: 8vh;
+}
+
+
+.logo-holder{
+  margin-top: 1%;
+  margin-left: 4%;
+  float: left;
+}
+
+.logo-img{
+  width: 25%;
+}
+
+.nav-holder{
+  float: right;
+  margin-right: 6%;
+  margin-top: 1.2%;
+  text-align: center;
+}
+
+.nav-text{
+  display: inline;
+  margin-right: 10%;
+  color: white;
+}
+
+.nav-text a {
+  color: white;
+
+}
+
+.nav-text a:hover{
+
+  color: yellow;
+  text-shadow: 2px 2px black;
+}
+
+
+/* Dashboard CSS */
+
+
+.dashboard-main{
+  height: 92vh;
+  width: 100vw;
+  float: left;
+}
+
+.background-img{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("./img/planet.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.info-con{
+  width: 35%;
+  height: 40%;
+  margin-top: 20%;
+  margin-left: 15%;
+  float: left;
+}
+
+.title-text{
+  font-size: 50px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.info-text{
+  font-size: 24px;
+  color: white;
+  margin-top: 3%;
+  padding: 0;
+}
+
+.description-text{
+  font-size: 18px;
+  color: white;
+  margin-top: 3%;
+  padding: 0;
+}
+
+.page-button{
+  width: 25%;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 4%;
+} 
+
+.page-button a {
+  color: white;
+}
+
+.card-carousel{
+  background-color: burlywood;
+  width: 50%;
+  height: 60%;
+  float: right;
+  margin-top: 10%;
+}
+
+
+
+/* Comparison CSS */
+
+
+.comparison-main{
+  background-color: #141B21;
+  width: 100vw;
+  height: 92vh;
+  float: left;
+}
+
+.dropdown-holder{
+  float: left;
+  width: 20%;
+  height: 70%;
+
+  margin-top: 6%;
+  margin-left: 4%;
+  background-color: aqua;
+}
+
+.grahp-holder{
+  float: right;
+  width: 60%;
+  height: 70%;
+
+  margin-top: 6%;
+  margin-right: 10%;
+  background-color: blueviolet;
+}
+
+/* Timeline CSS */
+
+
+.timeline-main{
+  background-color: #141B21;
+  width: 100vw;
+  height: 92vh;
+  float: left;
+}
+
+.timline-chart{
+  float: right;
+  width: 60%;
+  height: 70%;
+
+  margin-top: 6%;
+  margin-right: 10%;
+  background-color: darkgoldenrod;
+}
