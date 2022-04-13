@@ -7,6 +7,7 @@ import axios from "axios";
 const Dashboard = () => {
 
     const [movieInfo, setMovieInfo] =useState([]);
+    const [moviesData, setMovies] =useState([]);
     
 
     useEffect(() => {
@@ -33,6 +34,9 @@ const Dashboard = () => {
                 })
             }
 
+            setMovies(movies);        
+            setMovieInfo(movies[1]);  
+            
             setInterval(myTimer, 9000);
             let counter = 0;
             function myTimer() {
@@ -40,17 +44,18 @@ const Dashboard = () => {
                     setMovieInfo(movies[counter]);
                     counter++;
                 }else {
-                    counter = 1;
+                    counter = 0;
                 }
                 
             }
             
-
-            console.log (data)
-            console.log(movies)
-
-            
         })
+        
+        
+            
+
+            // console.log (data)
+            // console.log(movies)
     }, [])
 
 
