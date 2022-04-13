@@ -12,6 +12,7 @@ import Timeline from "./components/Timeline";
 import {Routes, Route} from 'react-router-dom';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,11 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/ComparisonFilms" element={<ComparisonFilms />}/>
         <Route path="/Timeline" element={<Timeline/>} />
+        <Route path="/ComparisonPeople" element={<ComparisonPeople />}/>
+        <Route path="/ComparisonPlanets" element={<ComparisonPlanets />}/>
+        <Route path="/ComparisonSpecies" element={<ComparisonSpecies/>} />
+        <Route path="/ComparisonStarships" element={<ComparisonStarships />}/>
+        <Route path="/ComparisonVehicles" element={<ComparisonVehicles />}/>
       </Routes>
     </div>
   );

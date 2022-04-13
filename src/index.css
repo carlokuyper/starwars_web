@@ -53,6 +53,15 @@ a {
 }
 
 
+.comparisonNav{
+  height: 8vh;
+  float: left;
+  margin-right: 6%;
+  margin-top: 1.2%;
+  text-align: center;
+}
+
+
 /* Dashboard CSS */
 
 
