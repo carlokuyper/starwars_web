@@ -2,18 +2,9 @@
     height: 92vh;
     width: 100vw;
     float: left;
+    background-color: #141B21;
 }
 
-.background-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("../img/planet.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    float: left;
-}
 
 .info-con {
     width: 35%;
@@ -42,25 +33,4 @@
     color: white;
     margin-top: 3%;
     padding: 0;
-}
-
-.page-button {
-    width: 25%;
-    border: 1px solid white;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    margin-top: 4%;
-}
-
-.page-button a {
-    color: white;
-}
-
-.card-carousel {
-    background-color: burlywood;
-    width: 50%;
-    height: 60%;
-    float: right;
-    margin-top: 10%;
 }

@@ -7,26 +7,52 @@ import axios from "axios";
 const Dashboard = () => {
 
     const [shipName, setShipName] = useState([]);
+    const [movieInfo, setMovieInfo] =useState([]);
 
     useEffect(() => {
         axios.get('https://swapi.dev/api/films/')
         .then((res) =>{
             let data= res.data.results;
+
+            let movieInfo = [];
+
             for(let i = 0; i < data.length; i++){
                 
-                let shipN = data[i].name;
+                movieInfo.push({
+                    name: data[i].title,
+                    ep: data[i].episode_id,
+                    intro: data[i].opening_crawl,
+                    releaseDate: data[i].release_date,
 
-                shipName.push(shipN)
+                    character: data[i].characters.length,
+                    species: data[i].species.length,
+                    
+                    planet: data[i].planets.length,
+                    starships: data[i].starships.length,
+                    vehicles: data[i].starships.length,
+                })
+
+                
+
+                
             }
 
-            setShipName(shipName)
+            setMovieInfo(movieInfo)
+
+            
+
             console.log (data)
+            console.log(movieInfo)
         })
-    })
+    }, [])
 
     return(
-        <div className="container-fluid dashboard-main">
-            <div className="background-img">
+        <div className="dashboard-main">
+            
+                <select className="starships" >
+                    <option>Starships</option>
+                    <option>vehicles</option>
+                </select>
                 <div className="info-con">
                     <h1 className="title-text">Tatooine</h1>
                     <p className="info-text">Population - 200000</p>
@@ -35,11 +61,7 @@ const Dashboard = () => {
                         <br></br>How many people live on them?
                         <br></br>What makes them special? 
                     </p>
-                    <div className="page-button"><a  href="/Comparison">Comparison</a></div>
-                </div>
-                <div className="card-carousel">
-                   
-                </div>
+                    
                 
             </div>
 
