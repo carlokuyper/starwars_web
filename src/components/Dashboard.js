@@ -46,18 +46,13 @@ const Dashboard = () => {
                 }
             }
         })
-            // console.log (data)
-            // console.log(movies)
+            
     }, [])
 
 
     return(
         <div className="dashboard-main">
             
-                <select className="starships" >
-                    <option>Starships</option>
-                    <option>vehicles</option>
-                </select>
                 <div className="info-con">
                     <h1 className="title-text">{movieInfo.name}</h1>
                     <p className="info-text">Episode  - {movieInfo.ep}</p>

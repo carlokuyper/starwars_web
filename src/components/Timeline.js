@@ -15,21 +15,18 @@ const Timeline = () => {
     const [releaseDate, setReleaseDate] = useState([]);
     
     useEffect(() => {
-        axios.get('https://swapi.dev/api/films')
-        .then((res) =>{
-            let data= res.data.results;
-
-            for(let i = 0; i < data.length; i++){
-                
-                let RDate = data[i].release_date;
-
-                releaseDate.push(RDate)
-            }
-
-            setReleaseDate(releaseDate);
+        
+        let moviesArray = ["The+Empire+Strikes+Back", "A+New+Hope", "Nobody's+Fool", "Ralph+Breaks+the+Internet", "robin+hood&y=2018", "Mortal+Engines", "Aquaman&y=2018", "Bumblebee", "high+school+musical", "17+again","the+great+gatsby",];
+        
+        for (let i = 0; i < moviesArray.length; i++) {
+            console.log(moviesArray[i]);
+            axios.get('https://www.omdbapi.com/?t=' + moviesArray[i] + '&apikey=5d0c0e4f')
+            .then((res) =>{
+                let data= res.data;
+                console.log (data);
+            })
             console.log (data);
-            console.log (releaseDate);
-        })
+        }
     })
     const data = {
         labels: releaseDate,
