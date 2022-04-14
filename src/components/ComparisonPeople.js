@@ -241,10 +241,9 @@ const ComparisonPeople = () => {
       };
 
       const filmData = {
-        labels: ['Red', 'Blue', ],
+        labels: [person1.name, person2.name],
         datasets: [
           {
-            label: '# of Votes',
             data: [person1films, person2films],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
@@ -262,60 +261,59 @@ const ComparisonPeople = () => {
  let peopleOptions = people.map((item) => ( <option key={item.key} value={item.url}> {item.name} </option>))
 
     return(
-        <>
+
         <div className="comparison-main">
         
-        <div className="dropdown-holder">
-            
-            <select className="person1" ref={inputPerson1}onChange={updatePerson1}>
-            {peopleOptions}
-            </select>
+            <div className="dropdown-holder">
+                
+                <div className="PInfo">
+                    <select className="person1" ref={inputPerson1}onChange={updatePerson1}>
+                    {peopleOptions}
+                    </select>
 
-            <div className="PInfo">
-                <h2>Name : {person1.name}</h2>
-                <h3>Hair colour : {person1.hair_color}</h3>
-                <h3>Eye colour : {person1.eye_color}</h3>
-                <h3>Birth year :  {person1.birth_year}</h3>
-                <h3>Gender : {person1.gender}</h3>
-                <h3>Homeworld : {person1homeworld}</h3>
-                <h3>Films : {person1films}</h3>
-                {/* <h3>Starships : {person1Starships}</h3>
-                <h3>Vehicles : {person1Vehicles}</h3> */}
+                    <h2>Name : {person1.name}</h2>
+                    <h3>Hair colour : {person1.hair_color}</h3>
+                    <h3>Eye colour : {person1.eye_color}</h3>
+                    <h3>Birth year :  {person1.birth_year}</h3>
+                    <h3>Gender : {person1.gender}</h3>
+                    <h3>Homeworld : {person1homeworld}</h3>
+                    {/* <h3>Films : {person1films}</h3> */}
+                    {/* <h3>Starships : {person1Starships}</h3>
+                    <h3>Vehicles : {person1Vehicles}</h3> */}
+                </div>
+                
+                
             </div>
-            
-              
-        </div>
 
-        <div className="dropdown-holder">
-            
-              <select className="person2" ref={inputPerson2} onChange={updatePerson2}>
-                  {peopleOptions}
-              </select>
+            <div className="dropdown-holder">
+                
+                <div className="PInfo">
+                    <select className="dropDown person2" ref={inputPerson2} onChange={updatePerson2}>
+                        {peopleOptions}
+                    </select>
 
-              <div className="PInfo">
-                <h2>Name : {person2.name}</h2>
-                <h3>Hair colour : {person2.hair_color}</h3>
-                <h3>Eye colour : {person2.eye_color}</h3>
-                <h3>Birth year :  {person2.birth_year}</h3>
-                <h3>Gender : {person2.gender}</h3>
-                <h3>Homeworld : {person2homeworld}</h3>
-                {/* <h3>Fimls : {person2films}</h3> */}
-                {/* <h3>Starships : {person2Starships}</h3>
-                <h3>Vehicles : {person2Vehicles}</h3> */}
+                    <h2>Name : {person2.name}</h2>
+                    <h3>Hair colour : {person2.hair_color}</h3>
+                    <h3>Eye colour : {person2.eye_color}</h3>
+                    <h3>Birth year :  {person2.birth_year}</h3>
+                    <h3>Gender : {person2.gender}</h3>
+                    <h3>Homeworld : {person2homeworld}</h3>
+                    {/* <h3>Fimls : {person2films}</h3> */}
+                    {/* <h3>Starships : {person2Starships}</h3>
+                    <h3>Vehicles : {person2Vehicles}</h3> */}
+                </div>
+                
             </div>
-              
+                
+                <div className="peopleChart2">
+                    <Pie data={filmData} />
+                </div>
+                <div className="peopleChart1">
+                    <Bar data={personData} />
+                </div>
+                <ComparisonNav />
         </div>
-            <div className="chartholder2">
-                <Bar data={personData} />
-            </div>
-            <div className="chartholder">
-                <Pie data={filmData} />
-            </div>
-            
-        </div>
-        <ComparisonNav />
-        </> 
-        
+                
     )
 }
 
