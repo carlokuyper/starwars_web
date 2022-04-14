@@ -1,6 +1,5 @@
 import React from "react";
 import '../css/comparison.css'
-import ComparisonNav from "./ComparisonNav";
 
 import {useState, useRef, useEffect } from 'react';
 import axios from "axios";
@@ -201,7 +200,7 @@ const ComparisonStarships = () => {
           <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
           <p className="text">Class:  {vehicle2.vehicle_class}</p>
         </div>
-        <ComparisonNav />
+
     </div>
       
   );

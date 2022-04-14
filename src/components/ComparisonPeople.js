@@ -1,6 +1,5 @@
 import React from "react";
 import '../css/comparison.css'
-import ComparisonNav from "./ComparisonNav";
 
 import {useState, useRef, useEffect } from 'react';
 import axios from "axios";
@@ -311,7 +310,7 @@ const ComparisonPeople = () => {
                 <div className="peopleChart1">
                     <Bar data={personData} />
                 </div>
-                <ComparisonNav />
+                
         </div>
                 
     )

@@ -7,22 +7,18 @@ const Header = () => {
             
             
             <div className="nav-holder">
-                <div className="nav-text"><a href="/">Home</a></div>
-                <div className="nav-text"><a href="/ComparisonPeople">Comparison</a></div>
-                <div className="nav-text"><a href="/Timeline">Timeline</a></div>
+                <button className="dropbtn"><a href="/">Home</a></button>
+                <div class="dropdown1">
+                    <button class="dropbtn"><a href="/ComparisonPeople">Comparison</a></button>
+                    <div class="dropdown-content">
+                        <a href="/ComparisonPeople">People</a>
+                        <a href="/ComparisonPlanets">Planets</a>
+                        <a href="/ComparisonVehicles">Vehicles</a>
+                        <a href="/ComparisonStarships">Starships</a>
+                    </div>
+                </div>
+                <button className="dropbtn"><a href="/Timeline">Timeline</a></button>
                 
-                https://www.w3schools.com/css/css_dropdowns.asp
-
-                <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-      <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-</ul>
-
             </div>
         </div>
     );

@@ -1,6 +1,5 @@
 import React from "react";
 import '../css/comparison.css'
-import ComparisonNav from "./ComparisonNav";
 
 import {useState, useRef, useEffect } from 'react';
 import axios from "axios";
@@ -178,7 +177,7 @@ const ComparisonPlanets = () => {
           <p className="text">Climate:  {planet2.climate}</p>
           <p className="text">Surface Water:  {planet2.surface_water}</p>
         </div>
-            <ComparisonNav />
+            
         </div>
     )
 }
