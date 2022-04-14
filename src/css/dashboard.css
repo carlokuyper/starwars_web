@@ -5,32 +5,89 @@
     background-color: #141B21;
 }
 
-
 .info-con {
     width: 35%;
     height: 40%;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 15%;
     float: left;
 }
 
 .title-text {
-    font-size: 50px;
-    color: white;
+    font-size: 35px;
+    color: #141B21;
     margin: 0;
     padding: 0;
 }
 
 .info-text {
-    font-size: 24px;
-    color: white;
+    font-size: 20px;
+    color: #141B21;
     margin-top: 3%;
     padding: 0;
 }
 
-.description-text {
-    font-size: 18px;
-    color: white;
+.stat-text {
+    font-size: 20px;
+    color: #141B21;
     margin-top: 3%;
     padding: 0;
+    margin-left: 5%;
+    float: left;
+}
+
+.description-text {
+    font-size: 16px;
+    color: #141B21;
+    margin-top: 3%;
+    padding: 0;
+}
+
+.titleCon{
+    width: 35%;
+    height: 45%;
+    padding: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: white;
+    border-radius: 20px;
+    float: left;
+}
+
+.statsCon{
+    width: 28%;
+    height: auto;
+    padding: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: white;
+    border-radius: 20px;
+    float: left;
+}
+
+#planetIMG{
+    background-image: url(../img/dash-planet.png);
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#robotIMG{
+    background-image: url(../img/dash-robot.png);
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#shipIMG{
+    background-image: url(../img/dash-spaceship.png);
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }

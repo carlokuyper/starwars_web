@@ -62,3 +62,13 @@
     border-radius: 20px;
 }
 
+.PInfo{
+    width: 20%;
+    height: auto;
+    padding: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: white;
+    border-radius: 20px;
+    float: left;
+  }

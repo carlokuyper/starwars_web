@@ -7,9 +7,22 @@
   
 .timline-chart{
   float: right;
-    width: 65vw;
+    width: 50vw;
     height: auto;
     margin-top: 7%;
     margin-right: 5%;
     background-color: white;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.personInfo{
+  width: 28%;
+  height: auto;
+  padding: 2%;
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: white;
+  border-radius: 20px;
+  float: left;
 }

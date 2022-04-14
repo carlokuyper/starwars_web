@@ -31,7 +31,6 @@ const Dashboard = () => {
                     vehicles: data[i].starships.length,
                 })
             }
-
                   
             setMovieInfo(movies[1]);  
             
@@ -53,17 +52,36 @@ const Dashboard = () => {
     return(
         <div className="dashboard-main">
             
-                <div className="info-con">
-                    <h1 className="title-text">{movieInfo.name}</h1>
-                    <p className="info-text">Episode  - {movieInfo.ep}</p>
-                    <p className="description-text">{movieInfo.intro}</p>
-                    <p className="info-text">Release Date: {movieInfo.releaseDate}</p>                  
-                    <p className="info-text">Characters {movieInfo.character}</p>
-                    <p className="info-text">{movieInfo.species} Characters Species</p>                  
-                    <p className="info-text">Planets in the movie {movieInfo.planet}</p>
-                    <p className="info-text">Starships {movieInfo.starships}</p>
-                    <p className="info-text">Vehicles {movieInfo.vehicles}</p>
-            </div>
+                
+                    <div className="titleCon">
+                        <h1 className="title-text">{movieInfo.name}</h1>
+                        <p className="info-text">Episode  - {movieInfo.ep}</p>
+                        <p className="description-text">{movieInfo.intro}</p>
+                    </div>
+                    
+                    <div></div>
+
+                    <div className="statsCon">
+                        <div id="planetIMG"></div>
+                        <p className="stat-text">Planets in the movie {movieInfo.planet}</p>
+                    </div>
+
+                    <div className="statsCon">
+                        <div id="robotIMG"></div>
+                        <p className="stat-text">Characters {movieInfo.character}</p>
+                        <p className="stat-text">{movieInfo.species} Characters Species</p>  
+                    </div>      
+
+                    <div className="statsCon">
+                        <div id="shipIMG"></div>
+                        <p className="stat-text">Starships {movieInfo.starships}</p>
+                        <p className="stat-text">Vehicles {movieInfo.vehicles}</p>
+                    </div>    
+
+                                    
+                    
+                    
+            
         </div>
          
         
