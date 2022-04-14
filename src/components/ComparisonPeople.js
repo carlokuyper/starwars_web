@@ -73,7 +73,7 @@ const ComparisonPeople = () => {
              console.log(res.data);
              person = res.data;
             setPerson1(person);
-             axios.get(res.data.homeworld)
+             
             updatePerson1Homeworld();
             updatePerson1Films();
             updatePerson1Starhips();
@@ -147,7 +147,7 @@ const ComparisonPeople = () => {
              console.log(res.data);
              person = res.data;
             setPerson2(person);
-             axios.get(res.data.homeworld)
+
             updatePerson2Homeworld();
             updatePerson2Films();
             updatePerson2Starhips();

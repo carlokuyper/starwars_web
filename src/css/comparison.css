@@ -5,13 +5,28 @@
     float: left;
 }
 
-.dropdown-holder {
+.text{
+    color: white;
+    margin: 0;
+    margin-left: 20px;
+}
+
+
+.dropdown-con{
     float: left;
-    width: 20%;
-    height: 70%;
-    margin-top: 6%;
-    margin-left: 4%;
-    background-color: aqua;
+    display: inline;
+}
+
+.dropdown {
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    float: left;
+}
+
+.info-con{
+    float: left;
 }
 
 .radar-holder {
@@ -23,17 +38,27 @@
     background-color: white;
 }
 
-.timline-chart{
-    float: right;
-    width: 60vw;
-    height: auto;
-    margin-top: 7%;
-    margin-right: 5%;
-    background-color: white;
+.chart-con{
+    float: left;
 }
 
-.starships {
-    width: 250px;
-    height: 30px;
-    margin-bottom: 10px;
+.chartholder{
+    float: left;
+    width: 20vw;
+    margin-left: 10px;
+    height: auto;
+    background-color: white;
+    padding: 8px;
+    border-radius: 20px;
 }
+
+.chartholder2{
+    float: left;
+    width: 40vw;
+    margin-left: 10px;
+    padding: 8px;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+}
+

@@ -6,9 +6,7 @@ import axios from "axios";
 
 const Dashboard = () => {
 
-    const [movieInfo, setMovieInfo] =useState([]);
-    const [moviesData, setMovies] =useState([]);
-    
+    const [movieInfo, setMovieInfo] = useState([]);
 
     useEffect(() => {
         axios.get('https://swapi.dev/api/films/')
@@ -34,7 +32,7 @@ const Dashboard = () => {
                 })
             }
 
-            setMovies(movies);        
+                  
             setMovieInfo(movies[1]);  
             
             setInterval(myTimer, 9000);
