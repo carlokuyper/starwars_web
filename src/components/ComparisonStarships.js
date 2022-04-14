@@ -5,10 +5,14 @@ import ComparisonNav from "./ComparisonNav";
 import {useState, useRef, useEffect } from 'react';
 import axios from "axios";
 
-import {  Chart as ChartJS,  RadialLinearScale,  ArcElement,  PointElement,  LineElement,  Filler,  Tooltip,  Legend,} from 'chart.js';
-import { PolarArea } from 'react-chartjs-2';
+import {  Chart as ChartJS, CategoryScale, LinearScale, BarElement,  RadialLinearScale,  ArcElement,  PointElement,  LineElement,  Filler,  Tooltip, Title, Legend,} from 'chart.js';
 
-ChartJS.register(    RadialLinearScale,    PointElement,    LineElement,    Filler,    Tooltip,    Legend  );
+import { Bar } from 'react-chartjs-2';
+import { PolarArea } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
+
+ChartJS.register(  RadialLinearScale, ArcElement, CategoryScale,  PointElement,  LineElement, LinearScale,  BarElement,  Title, Filler,  Tooltip,  Legend);
 
 const ComparisonStarships = () => {
 
@@ -30,27 +34,19 @@ const ComparisonStarships = () => {
           let vehicles = [];
 
           for(let i = 0; i < data.length; i++){
-              
-              let vehicles = data[i].cargo_capacity;
+            let vehicles = data[i].cargo_capacity;
 
-              for(let i = 0; i < data.length; i++){
-                names.push({
-                    key: i,
-                    name: data[i].name,
-                    url: data[i].url,
-                })
+            for(let i = 0; i < data.length; i++){
+              names.push({
+                  key: i,
+                  name: data[i].name,
+                  url: data[i].url,
+              })
             }
-            
           }
           setVehicle(names)
           console.log (data)
-          
-
       })
-
-      
-      
-      
   },[])
 
 
@@ -88,58 +84,127 @@ const ComparisonStarships = () => {
     console.log(vehicle2.cost_in_credits);
   }
  
-    const speedData = {
-      labels: [vehicle1.name + ' Speed', vehicle2.name + ' Speed', vehicle1.name + ' Hyperdrive', vehicle2.name + ' Hyperdrive'],
-      datasets: [
-        {
-          label: '# of Votes',
-          data: [vehicle1.max_atmosphering_speed, vehicle2.max_atmosphering_speed, vehicle1.MGLT, vehicle2.MGLT],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.5)',
-            'rgba(54, 162, 235, 0.5)',
-            'rgba(255, 206, 86, 0.5)',
-            'rgba(75, 192, 192, 0.5)',
-            'rgba(153, 102, 255, 0.5)',
-            'rgba(255, 159, 64, 0.5)',
-          ],
-          borderWidth: 1,
-    },
-  ],
-    };
 
-    let vehicleOptions = vehicle.map((item) => ( <option key={item.key} value={item.url}> {item.name} </option>))
 
-    return(
-      <div className="comparison-main">
-          <div className="dropdown-con">
-              <select className="dropdown" ref={inputVehicle1}onChange={updateVehicle1}>
-                {vehicleOptions}
-              </select>
-              <select className="dropdown" ref={inputVehicle2}onChange={updateVehicle2}>
-                {vehicleOptions}
-              </select>
-            </div>  
+  const speedData = {
+    labels: [ vehicle1.name, vehicle2.name ],
+    datasets: [
+      {
+        label: 'Atmospher Speed',
+        data: [vehicle1.max_atmosphering_speed, vehicle2.max_atmosphering_speed,],
+        backgroundColor: 'rgb(255, 99, 132)',
+        stack: 'Stack 0',
+      },
+      {
+        label: 'MGLT',
+        data: [vehicle1.MGLT,  vehicle2.MGLT,],
+        backgroundColor: 'rgb(75, 192, 192)',
+        stack: 'Stack 0',
+      }
+    ],
+  };
+
+  const costData = {
+    labels: [vehicle1.name + ' Credits', vehicle2.name + ' Credits'],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [vehicle1.cost_in_credits, vehicle2.cost_in_credits],
+        backgroundColor: [
+          'red',
+          'pink',
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+  
+  const peopleData = {
+    labels: [vehicle1.name + 'Crew', vehicle2.name + 'Crew', vehicle1.name + 'Passengers', vehicle2.name + 'Passengers'],
+    datasets: [
+      {
+        label: ['Crew', 'Passengers'],
+        data: [vehicle1.crew, vehicle2.crew, vehicle1.passengers, vehicle2.passengers],
+        backgroundColor: [
+          'blue', 
+          'green',
+          'orange',
+          'purple'
+        ], 
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 0,
+      },
+    ],
+  };
+
+  const capacityData = {
+    labels: [vehicle1.name + 'Cargo', vehicle2.name + 'Cargo',  vehicle1.name + 'Consmables',  vehicle2.name + 'Consmables'],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [vehicle1.cargo_capacity, vehicle2.cargo_capacity, vehicle1.consumables, vehicle2.consumables],
+        backgroundColor: [
+          'blue', 
+          'green',
+          'orange',
+          'purple'
+        ], 
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 0,
+      },
+    ],
+  };
+  
+
+
+  let vehicleOptions = vehicle.map((item) => ( <option key={item.key} value={item.url}> {item.name} </option>))
+
+  return(
+    <div className="comparison-main">
+        <div className="dropdown-con">
+            <select className="dropdown" ref={inputVehicle1}onChange={updateVehicle1}>
+              {vehicleOptions}
+            </select>
+            <select className="dropdown" ref={inputVehicle2}onChange={updateVehicle2}>
+              {vehicleOptions}
+            </select>
+          </div>  
+        <div className="chart-con">
+          <div className="chartholder2">
+            <Bar data={peopleData} />
+          </div>
+
+          <div className="chartholder2">
+            <Bar data={speedData} />
+          </div>
+
+          
 
           <div className="chartholder">
-              <PolarArea data={speedData} />
-          </div>
+            <Doughnut data={capacityData} />
+          </div> 
 
-          <div className="info-con">
-            <p className="text">Name:  {vehicle1.name}</p>
-            <p className="text">Model:  {vehicle1.model}</p>
-            <p className="text">Manufacturer:  {vehicle1.manufacturer}</p>
-            <p className="text">Class:  {vehicle1.vehicle_class}</p>
+          <div className="chartholder">
+            <Pie data={costData} />
           </div>
-          <div className="info-con">
-            <p className="text">Name:  {vehicle2.name}</p>
-            <p className="text">Model:  {vehicle2.model}</p>
-            <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
-            <p className="text">Class:  {vehicle2.vehicle_class}</p>
-          </div>
-          <ComparisonNav />
-      </div>
-       
-    );
+        </div>
+
+        <div className="info-con">
+          <p className="text">Name:  {vehicle1.name}</p>
+          <p className="text">Model:  {vehicle1.model}</p>
+          <p className="text">Manufacturer:  {vehicle1.manufacturer}</p>
+          <p className="text">Class:  {vehicle1.vehicle_class}</p>
+        </div>
+        <div className="info-con">
+          <p className="text">Name:  {vehicle2.name}</p>
+          <p className="text">Model:  {vehicle2.model}</p>
+          <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
+          <p className="text">Class:  {vehicle2.vehicle_class}</p>
+        </div>
+        <ComparisonNav />
+    </div>
+      
+  );
 }
 
 export default ComparisonStarships;

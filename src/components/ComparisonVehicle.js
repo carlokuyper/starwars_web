@@ -5,7 +5,8 @@ import ComparisonNav from "./ComparisonNav";
 import {useState, useRef, useEffect } from 'react';
 import axios from "axios";
 
-import {  Chart as ChartJS,  RadialLinearScale,  ArcElement,  PointElement,  LineElement,  Filler,  Tooltip,  Legend,} from 'chart.js';
+import {  Chart as ChartJS, CategoryScale, LinearScale, BarElement,  RadialLinearScale,  ArcElement,  PointElement,  LineElement,  Filler,  Tooltip, Title, Legend,} from 'chart.js';
+
 import { Bar } from 'react-chartjs-2';
 import { Pie } from 'react-chartjs-2';
 import { Doughnut } from 'react-chartjs-2';
@@ -13,6 +14,7 @@ import { Doughnut } from 'react-chartjs-2';
 
 ChartJS.register(  RadialLinearScale,  PointElement,  LineElement,  Filler,  Tooltip,  Legend);
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
+ChartJS.register(  CategoryScale,  LinearScale,  BarElement,  Title,  Tooltip,  Legend);
 
 
 const ComparisonVehicles = () => {
@@ -162,7 +164,7 @@ const ComparisonVehicles = () => {
         
         <div className="chart-con">
           <div className="chartholder2">
-            <Pie data={peopleData} />
+            <Bar data={peopleData} />
           </div>
 
           <div className="chartholder">
