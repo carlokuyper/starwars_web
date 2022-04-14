@@ -12,11 +12,17 @@ ChartJS.register(  CategoryScale,  LinearScale,  PointElement,  LineElement,  Ti
 
 const Timeline = () => {
 
-    const [releaseDate, setReleaseDate] = useState([]);
+    const [movie, setMovie] = useState([]);
+
+    const inputMovie1 = useRef();
+    const inputMovie2 = useRef();
+
+    const [movie1, setMovie1] = useState([]);
+    const [movie2, setMovie2] = useState([]);
     
     useEffect(() => {
         
-        let moviesArray = ["The+Empire+Strikes+Back", "A+New+Hope", "Nobody's+Fool", "Ralph+Breaks+the+Internet", "robin+hood&y=2018", "Mortal+Engines", "Aquaman&y=2018", "Bumblebee", "high+school+musical", "17+again","the+great+gatsby",];
+        let moviesArray = ["A+New+Hope", "The+Empire+Strikes+Back", "Return+of+the+Jedi", "The+Phantom+Menace", "Attack+of+the+Clones", "Revenge+of+the+Sith"];
         
         for (let i = 0; i < moviesArray.length; i++) {
             console.log(moviesArray[i]);
@@ -25,41 +31,79 @@ const Timeline = () => {
                 let data= res.data;
                 console.log (data);
             })
-            console.log (data);
+            
         }
     })
-    const data = {
-        labels: releaseDate,
-        datasets: [
-          {
-            label: "First dataset",
-            data: [33, 53, 85, 41, 44, 65],
-            fill: true,
-            backgroundColor: "rgba(75,192,192,0.2)",
-            borderColor: "rgba(75,192,192,1)"
-          },
-          {
-            label: "Second dataset",
-            data: [33, 25, 35, 51, 54, 76],
-            fill: true,
-            borderColor: "#742774"
-          }
-        ]
-      };
+   
+
       
+  function updateMovie1(){
+    let movieData = {};
+    console.log(inputMovie1.current.value);
+    const url = inputMovie1.current.value;
+    axios.get(url)
+    .then((res) =>{
+        let data= res.data.results;
+          console.log(res.data);
+
+          movieData = res.data;
+        setMovie1(movieData);
+    })      
+
+
+    console.log(movie1.cost_in_credits);
+  }
+
+  function updateMovie2(){
+    let movieData = {};
+    console.log(inputMovie2.current.value);
+    const url = inputMovie2.current.value;
+    axios.get(url)
+    .then((res) =>{
+        let data= res.data.results;
+          console.log(res.data);
+
+          movieData = res.data;
+        setMovie2(movieData);
+    })
+    console.log(movie2.cost_in_credits);
+  }
+
+  const movieInfo = {
+    labels: [inputMovie1.data,'testing'],
+    datasets: [
+        {
+        label: 'Dataset 1',
+        data: [33, 53, 85, 41, 44, 65],
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+        {
+        label: 'Dataset 2',
+        data: [33, 53, 85, 41, 44, 30],
+        borderColor: 'rgb(53, 162, 235)',
+        backgroundColor: 'green',
+        },
+    ],
+  };
+      
+  let movieOptions = movie.map((item) => ( <option key={item.key} value={item.url}> {item.name} </option>))
+
     return(
         <>
             <div className="timeline-main">
-                <div className="dropdown-holder">
-                    <select className="starships" >
-                        <option>Starships</option>
-                        <option>vehicles</option>
-                    </select>
-                </div>
+            <div className="dropdown-con">
+                <select className="dropdown" ref={inputMovie1}onChange={updateMovie1}>
+                {movieOptions}
+                </select>
+                <select className="dropdown" ref={inputMovie2}onChange={updateMovie2}>
+                {movieOptions}
+                </select>
+            </div>
             
 
                 <div className="timline-chart">
-                    <Line data={data}/>
+                    <Line data={movieInfo}/>
                 </div>
             </div>
         </>      

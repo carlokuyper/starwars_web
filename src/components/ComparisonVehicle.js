@@ -18,48 +18,38 @@ ChartJS.register(  CategoryScale,  LinearScale,  BarElement,  Title,  Tooltip,  
 
 
 const ComparisonVehicles = () => {
+  const [vehicle, setVehicle] = useState([]);
 
-    const [vehicleInfo, setVehicleInfo] =useState([]);
-    const [vehicle, setVehicle] = useState([]);
-    
+  const inputVehicle1 = useRef();
+  const inputVehicle2 = useRef();
 
-    const inputVehicle1 = useRef();
-    const inputVehicle2 = useRef();
+  const [vehicle1, setVehicle1] = useState([]);
+  const [vehicle2, setVehicle2] = useState([]);
 
-    const [vehicle1, setVehicle1] = useState([]);
-    const [vehicle2, setVehicle2] = useState([]);
+  useEffect(() => {
+    let names = [];
+      axios.get('https://swapi.dev/api/vehicles/')
+      .then((res) => {
+          let data= res.data.results;
 
-    useEffect(() => {
-      let names = [];
-        axios.get('https://swapi.dev/api/vehicles/')
-        .then((res) => {
-            let data= res.data.results;
+          let vehicles = [];
 
-            let vehicles = [];
-
-            for(let i = 0; i < data.length; i++){
-                
-                let vehicles = data[i].cargo_capacity;
-
-                for(let i = 0; i < data.length; i++){
-                  names.push({
-                      key: i,
-                      name: data[i].name,
-                      url: data[i].url,
-                  })
-              }
+          for(let i = 0; i < data.length; i++){
               
+              let vehicles = data[i].cargo_capacity;
+
+              for(let i = 0; i < data.length; i++){
+                names.push({
+                    key: i,
+                    name: data[i].name,
+                    url: data[i].url,
+                })
             }
-            setVehicle(names)
-            console.log (data)
-            
-
-        })
-
-        
-        
-        
-    },[])
+          }
+          setVehicle(names)
+          console.log (data)
+      })
+},[])
 
 
   function updateVehicle1(){
@@ -90,9 +80,7 @@ const ComparisonVehicles = () => {
 
           vehicleData = res.data;
         setVehicle2(vehicleData);
-    })      
-
-
+    })
     console.log(vehicle2.cost_in_credits);
   }
 
@@ -147,51 +135,48 @@ const ComparisonVehicles = () => {
     ],
   };
 
-      let vehicleOptions = vehicle.map((item) => ( <option key={item.key} value={item.url}> {item.name} </option>))
+  let vehicleOptions = vehicle.map((item) => ( <option key={item.key} value={item.url}> {item.name} </option>))
 
-
-    return(
-      <div className="comparison-main">
-        <div className="dropdown-con">
-          <select className="dropdown" ref={inputVehicle1}onChange={updateVehicle1}>
-            {vehicleOptions}
-          </select>
-          <select className="dropdown" ref={inputVehicle2}onChange={updateVehicle2}>
-            {vehicleOptions}
-          </select>
-        </div>
-        
-        
-        <div className="chart-con">
-          <div className="chartholder2">
-            <Bar data={peopleData} />
-          </div>
-
-          <div className="chartholder">
-            <Pie data={costData} />
-          </div>
-
-          <div className="chartholder">
-            <Doughnut data={capacityData} />
-          </div>                
-        </div>
-          
-          <div className="info-con">
-            <p className="text">Name:  {vehicle1.name}</p>
-            <p className="text">Model:  {vehicle1.model}</p>
-            <p className="text">Manufacturer:  {vehicle1.manufacturer}</p>
-            <p className="text">Class:  {vehicle1.vehicle_class}</p>
-          </div>
-          <div className="info-con">
-            <p className="text">Name:  {vehicle2.name}</p>
-            <p className="text">Model:  {vehicle2.model}</p>
-            <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
-            <p className="text">Class:  {vehicle2.vehicle_class}</p>
-          </div>
-
-          <ComparisonNav />
+  return(
+    <div className="comparison-main">
+      <div className="dropdown-con">
+        <select className="dropdown" ref={inputVehicle1}onChange={updateVehicle1}>
+          {vehicleOptions}
+        </select>
+        <select className="dropdown" ref={inputVehicle2}onChange={updateVehicle2}>
+          {vehicleOptions}
+        </select>
       </div>
-    )
+      
+      <div className="chart-con">
+        <div className="chartholder2">
+          <Bar data={peopleData} />
+        </div>
+
+        <div className="chartholder">
+          <Pie data={costData} />
+        </div>
+
+        <div className="chartholder">
+          <Doughnut data={capacityData} />
+        </div>                
+      </div>
+        <div className="info-con">
+          <p className="text">Name:  {vehicle1.name}</p>
+          <p className="text">Model:  {vehicle1.model}</p>
+          <p className="text">Manufacturer:  {vehicle1.manufacturer}</p>
+          <p className="text">Class:  {vehicle1.vehicle_class}</p>
+        </div>
+        <div className="info-con">
+          <p className="text">Name:  {vehicle2.name}</p>
+          <p className="text">Model:  {vehicle2.model}</p>
+          <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
+          <p className="text">Class:  {vehicle2.vehicle_class}</p>
+        </div>
+
+        <ComparisonNav />
+    </div>
+  )
 }
 
 export default ComparisonVehicles
