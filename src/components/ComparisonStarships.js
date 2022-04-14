@@ -160,14 +160,27 @@ const ComparisonStarships = () => {
 
   return(
     <div className="comparison-main">
-        <div className="dropdown-con">
-            <select className="dropdown" ref={inputVehicle1}onChange={updateVehicle1}>
+      <div className="PlanitInfoCon">
+        <div className="PlanetInfo">
+          <select className="dropDown" ref={inputVehicle1}onChange={updateVehicle1}>
+              {vehicleOptions}
+          </select>
+          <p className="text">Name:  {vehicle1.name}</p>
+          <p className="text">Model:  {vehicle1.model}</p>
+          <p className="text">Manufacturer:  {vehicle1.manufacturer}</p>
+          <p className="text">Class:  {vehicle1.vehicle_class}</p>
+        </div>
+        <div className="PlanetInfo">
+        <select className="dropDown" ref={inputVehicle2}onChange={updateVehicle2}>
               {vehicleOptions}
             </select>
-            <select className="dropdown" ref={inputVehicle2}onChange={updateVehicle2}>
-              {vehicleOptions}
-            </select>
-          </div>  
+          <p className="text">Name:  {vehicle2.name}</p>
+          <p className="text">Model:  {vehicle2.model}</p>
+          <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
+          <p className="text">Class:  {vehicle2.vehicle_class}</p>
+        </div>
+    </div>
+        
         <div className="chart-con">
           <div className="chartholder2">
             <Bar data={peopleData} />
@@ -188,18 +201,7 @@ const ComparisonStarships = () => {
           </div>
         </div>
 
-        <div className="info-con">
-          <p className="text">Name:  {vehicle1.name}</p>
-          <p className="text">Model:  {vehicle1.model}</p>
-          <p className="text">Manufacturer:  {vehicle1.manufacturer}</p>
-          <p className="text">Class:  {vehicle1.vehicle_class}</p>
-        </div>
-        <div className="info-con">
-          <p className="text">Name:  {vehicle2.name}</p>
-          <p className="text">Model:  {vehicle2.model}</p>
-          <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
-          <p className="text">Class:  {vehicle2.vehicle_class}</p>
-        </div>
+        
 
     </div>
       

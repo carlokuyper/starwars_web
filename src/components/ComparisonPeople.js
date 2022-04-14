@@ -227,12 +227,12 @@ const ComparisonPeople = () => {
         labels: [ person1.name, person2.name,],
         datasets: [
             {
-              label: 'Dataset 1',
+              label: 'Mass',
               data: [person1.mass, person2.mass,],
               backgroundColor: 'rgba(255, 99, 132, 0.5)',
             },
             {
-              label: 'Dataset 2',
+              label: 'Height',
               data: [person1.height, person2.height],
               backgroundColor: 'rgba(53, 162, 235, 0.5)',
             },
@@ -263,50 +263,48 @@ const ComparisonPeople = () => {
 
         <div className="comparison-main">
         
-            <div className="dropdown-holder">
+            <div className="PInfoCon">
                 
                 <div className="PInfo">
-                    <select className="person1" ref={inputPerson1}onChange={updatePerson1}>
+                    <select className="dropDown person1" ref={inputPerson1}onChange={updatePerson1}>
                     {peopleOptions}
                     </select>
 
                     <h2>Name : {person1.name}</h2>
-                    <h3>Hair colour : {person1.hair_color}</h3>
-                    <h3>Eye colour : {person1.eye_color}</h3>
-                    <h3>Birth year :  {person1.birth_year}</h3>
-                    <h3>Gender : {person1.gender}</h3>
-                    <h3>Homeworld : {person1homeworld}</h3>
+                    <p className="text">Hair colour : {person1.hair_color}</p>
+                    <p className="text">Eye colour : {person1.eye_color}</p>
+                    <p className="text">Birth year :  {person1.birth_year}</p>
+                    <p className="text">Gender : {person1.gender}</p>
+                    <p className="text">Homeworld : {person1homeworld}</p>
                     {/* <h3>Films : {person1films}</h3> */}
                     {/* <h3>Starships : {person1Starships}</h3>
                     <h3>Vehicles : {person1Vehicles}</h3> */}
                 </div>
                 
-                
-            </div>
-
-            <div className="dropdown-holder">
-                
+                              
                 <div className="PInfo">
                     <select className="dropDown person2" ref={inputPerson2} onChange={updatePerson2}>
                         {peopleOptions}
                     </select>
 
                     <h2>Name : {person2.name}</h2>
-                    <h3>Hair colour : {person2.hair_color}</h3>
-                    <h3>Eye colour : {person2.eye_color}</h3>
-                    <h3>Birth year :  {person2.birth_year}</h3>
-                    <h3>Gender : {person2.gender}</h3>
-                    <h3>Homeworld : {person2homeworld}</h3>
+                    <p className="text">Hair colour : {person2.hair_color}</p>
+                    <p className="text">Eye colour : {person2.eye_color}</p>
+                    <p className="text">Birth year :  {person2.birth_year}</p>
+                    <p className="text">Gender : {person2.gender}</p>
+                    <p className="text">Homeworld : {person2homeworld}</p>
                     {/* <h3>Fimls : {person2films}</h3> */}
                     {/* <h3>Starships : {person2Starships}</h3>
                     <h3>Vehicles : {person2Vehicles}</h3> */}
                 </div>
                 
-            </div>
-                
                 <div className="peopleChart2">
                     <Pie data={filmData} />
                 </div>
+
+            </div>
+                
+                
                 <div className="peopleChart1">
                     <Bar data={personData} />
                 </div>

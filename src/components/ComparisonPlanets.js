@@ -142,18 +142,33 @@ const ComparisonPlanets = () => {
 
     return(
         <div className="comparison-main">
-            <div className="dropdown-con">
-            <select className="dropdown" ref={inputPlanet1}onChange={updatePlanet1}>
-              {planetOptions}
-            </select>
-            <select className="dropdown" ref={inputPlanet2}onChange={updatePlanet2}>
-              {planetOptions}
-            </select>
-          </div>  
-        <div className="chart-con">
-          <div className="chartholder2">
-            <Bar data={rotationData} />
+          <div className="PlanitInfoCon">
+            <div className="PlanetInfo">
+              <select className="dropDown" ref={inputPlanet1}onChange={updatePlanet1}>
+                {planetOptions}
+              </select>
+
+              <h2>Name:  {planet1.name}</h2>
+              <p className="text">Terrain:  {planet1.terrain}</p>
+              <p className="text">Climate:  {planet1.climate}</p>
+              <p className="text">Surface Water:  {planet1.surface_water}</p>
+            </div>
+            <div className="PlanetInfo">
+              <select className="dropDown" ref={inputPlanet2}onChange={updatePlanet2}>
+                {planetOptions}
+              </select>
+
+              <h2>Name:  {planet2.name}</h2>
+              <p className="text">Terrain:  {planet2.terrain}</p>
+              <p className="text">Climate:  {planet2.climate}</p>
+              <p className="text">Surface Water:  {planet2.surface_water}</p>
+            </div>
+            <div className="rotationChart">
+              <Bar data={rotationData} />
           </div>
+        </div>
+        <div className="chart-con">
+          
 
           <div className="chartholder">
             <Doughnut data={popData} />
@@ -165,18 +180,7 @@ const ComparisonPlanets = () => {
 
         </div>
 
-        <div className="info-con">
-          <p className="text">Name:  {planet1.name}</p>
-          <p className="text">Terrain:  {planet1.terrain}</p>
-          <p className="text">Climate:  {planet1.climate}</p>
-          <p className="text">Surface Water:  {planet1.surface_water}</p>
-        </div>
-        <div className="info-con">
-          <p className="text">Name:  {planet2.name}</p>
-          <p className="text">Terrain:  {planet2.terrain}</p>
-          <p className="text">Climate:  {planet2.climate}</p>
-          <p className="text">Surface Water:  {planet2.surface_water}</p>
-        </div>
+        
             
         </div>
     )
