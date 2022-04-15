@@ -84,48 +84,46 @@ const ComparisonVehicles = () => {
     console.log(vehicle2.cost_in_credits);
   }
 
-  const costData = {
-    labels: [vehicle1.name + ' Credits', vehicle2.name + ' Credits'],
-    datasets: [
-      {
-        label: '# of Votes',
-        data: [vehicle1.cost_in_credits, vehicle2.cost_in_credits],
-        backgroundColor: [
-          'red',
-          'pink',
-        ],
-        borderWidth: 1,
-      },
-    ],
-  };
-
   const peopleData = {
     labels: [vehicle1.name, vehicle2.name],
     datasets: [
       {
         label: 'Crew',
         data: [vehicle1.crew, vehicle2.crew,],
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        backgroundColor: '#176087',
       },
       {
         label: 'Passengers',
         data: [vehicle1.passengers, vehicle2.passengers],
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        backgroundColor: '#1B998B',
+      },
+    ],
+  };
+
+  const costData = {
+    labels: [vehicle1.name + " Cost", vehicle2.name + " Cost"],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [vehicle1.cost_in_credits, vehicle2.cost_in_credits],
+        backgroundColor: [
+          '#4ECDC4',
+          '#822EB1',
+        ],
+        borderWidth: 1,
       },
     ],
   };
 
   const capacityData = {
-    labels: [vehicle1.name + 'Cargo', vehicle2.name + 'Cargo',  vehicle1.name + 'Consmables',  vehicle2.name + 'Consmables'],
+    labels: ['Cargo', 'Consmables'],
     datasets: [
       {
         label: '# of Votes',
         data: [vehicle1.cargo_capacity, vehicle2.cargo_capacity, vehicle1.consumables, vehicle2.consumables],
         backgroundColor: [
-          'blue', 
-          'green',
-          'orange',
-          'purple'
+          '#FFE81F', 
+          '#E4572E'
         ], 
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 0,
@@ -138,6 +136,7 @@ const ComparisonVehicles = () => {
   return(
     <div className="comparison-main">
       <div className="PInfoCon">
+      <h1 className="titleHolder">Vehicle Comparison</h1>
         <div className="PlanetInfo">
           <select className="dropDown" ref={inputVehicle1}onChange={updateVehicle1}>
             {vehicleOptions}

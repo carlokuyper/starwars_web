@@ -229,30 +229,30 @@ const ComparisonPeople = () => {
             {
               label: 'Mass',
               data: [person1.mass, person2.mass,],
-              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              backgroundColor: '#1B998B',
             },
             {
               label: 'Height',
               data: [person1.height, person2.height],
-              backgroundColor: 'rgba(53, 162, 235, 0.5)',
+              backgroundColor: '#176087',
             },
           ],
       };
 
       const filmData = {
-        labels: [person1.name, person2.name],
+        labels: [person1.name + " Films", person2.name + " Films"],
         datasets: [
           {
             data: [person1films, person2films],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
+              '#EAC435',
+              '#E4572E',
             ],
             borderColor: [
               'rgba(255, 99, 132, 1)',
               'rgba(54, 162, 235, 1)',
             ],
-            borderWidth: 1,
+            borderWidth: 0 ,
           },
         ],
       };
@@ -264,7 +264,7 @@ const ComparisonPeople = () => {
         <div className="comparison-main">
         
             <div className="PInfoCon">
-                
+                <h1 className="titleHolder">People Comparison</h1>
                 <div className="PlanetInfo">
                     <select className="dropDown person1" ref={inputPerson1}onChange={updatePerson1}>
                     {peopleOptions}

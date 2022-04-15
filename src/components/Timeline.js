@@ -94,8 +94,8 @@ const Timeline = () => {
         {
         label: 'Years released',
         data: timeYear,
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: '#176087',
+        backgroundColor: '#15577A',
         },
         
     ],

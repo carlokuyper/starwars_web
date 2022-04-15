@@ -90,10 +90,8 @@ const ComparisonPlanets = () => {
         label: '# of Votes',
         data: [planet1.population, planet2.population],
         backgroundColor: [
-          'blue', 
-          'green',
-          'orange',
-          'purple'
+          '#4ECDC4', 
+          '#822EB1',
         ], 
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 0,
@@ -108,10 +106,8 @@ const ComparisonPlanets = () => {
         label: '# of Votes',
         data: [planet1.diameter, planet2.diameter],
         backgroundColor: [
-          'blue', 
-          'green',
-          'orange',
-          'purple'
+          '#FFE81F',
+          '#E4572E'
         ], 
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 0,
@@ -125,13 +121,13 @@ const ComparisonPlanets = () => {
         {
             label: 'Orbital Period',
             data: [ planet1.orbital_period, planet2.orbital_period],
-            backgroundColor: 'rgb(75, 192, 192)',
+            backgroundColor: '#176087',
             stack: 'Stack 0',
         },
         {
         label: ' Rotation Period',
         data: [planet1.rotation_period, planet2.rotation_period, ],
-        backgroundColor: 'rgb(255, 99, 132)',
+        backgroundColor: '#1B998B',
         stack: 'Stack 0',
       }
     ],
@@ -141,8 +137,9 @@ const ComparisonPlanets = () => {
   let planetOptions = planet.map((item) => ( <option key={item.key} value={item.url}> {item.name} </option>))
 
     return(
-        <div className="comparison-main">
+        <div className="comparison-main ">
           <div className="PInfoCon">
+          <h1 className="titleHolder">Planet Comparison</h1>
             <div className="PlanetInfo">
               <select className="dropDown" ref={inputPlanet1}onChange={updatePlanet1}>
                 {planetOptions}
