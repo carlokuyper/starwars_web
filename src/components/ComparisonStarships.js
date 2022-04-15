@@ -35,13 +35,12 @@ const ComparisonStarships = () => {
           for(let i = 0; i < data.length; i++){
             let vehicles = data[i].cargo_capacity;
 
-            for(let i = 0; i < data.length; i++){
               names.push({
                   key: i,
                   name: data[i].name,
                   url: data[i].url,
               })
-            }
+            
           }
           setVehicle(names)
           console.log (data)
@@ -119,19 +118,17 @@ const ComparisonStarships = () => {
   };
   
   const peopleData = {
-    labels: [vehicle1.name + 'Crew', vehicle2.name + 'Crew', vehicle1.name + 'Passengers', vehicle2.name + 'Passengers'],
+    labels: [vehicle1.name, vehicle2.name],
     datasets: [
       {
-        label: ['Crew', 'Passengers'],
-        data: [vehicle1.crew, vehicle2.crew, vehicle1.passengers, vehicle2.passengers],
-        backgroundColor: [
-          'blue', 
-          'green',
-          'orange',
-          'purple'
-        ], 
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 0,
+        label: 'Crew',
+        data: [vehicle1.crew, vehicle2.crew,],
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      {
+        label: 'Passengers',
+        data: [vehicle1.passengers, vehicle2.passengers],
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },
     ],
   };
@@ -160,7 +157,7 @@ const ComparisonStarships = () => {
 
   return(
     <div className="comparison-main">
-      <div className="PlanitInfoCon">
+      <div className="PInfoCon">
         <div className="PlanetInfo">
           <select className="dropDown" ref={inputVehicle1}onChange={updateVehicle1}>
               {vehicleOptions}
@@ -179,25 +176,23 @@ const ComparisonStarships = () => {
           <p className="text">Manufacturer:  {vehicle2.manufacturer}</p>
           <p className="text">Class:  {vehicle2.vehicle_class}</p>
         </div>
+
+        <div className="rotationChart">
+            <Bar data={peopleData} />
+          </div>
     </div>
         
         <div className="chart-con">
-          <div className="chartholder2">
-            <Bar data={peopleData} />
-          </div>
-
-          <div className="chartholder2">
-            <Bar data={speedData} />
-          </div>
-
-          
-
           <div className="chartholder">
             <Doughnut data={capacityData} />
           </div> 
 
           <div className="chartholder">
             <Pie data={costData} />
+          </div>
+
+          <div className="chartholder2">
+            <Bar data={speedData} />
           </div>
         </div>
 

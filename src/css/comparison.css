@@ -41,12 +41,14 @@
 
 .chart-con{
     float: left;
+    width: 100%;
+    margin-top: 2%;
 }
 
 .chartholder{
     float: left;
-    width: 20vw;
-    margin-left: 10px;
+    width: 22.5%;
+    margin-left: 2%;
     height: auto;
     background-color: white;
     padding: 8px;
@@ -56,7 +58,7 @@
 .chartholder2{
     float: left;
     width: 40vw;
-    margin-left: 10px;
+    margin-left: 2%;
     padding: 8px;
     height: auto;
     background-color: white;
@@ -96,7 +98,7 @@
 
 .peopleChart1{
     float: left;
-    width: 40vw;
+    width: 40vw !important;
     margin-left: 2%;
     margin-top: 2%;
     height: auto;
@@ -106,7 +108,7 @@
 
 .peopleChart2{
     float: left;
-    height: 100%;
+    height: 100% !important;
     margin-left: 2%;
     margin-top: 2%;
     padding: 8px;
@@ -117,11 +119,11 @@
 
 .rotationChart{
     float: left;
-    height: 200%; 
+    height: 115%; 
+    width: 40%;
     margin-left: 2%;
     margin-top: 2%;
     padding: 8px;
-    height: auto;
     background-color: white;
     border-radius: 20px;
 }

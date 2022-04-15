@@ -31,8 +31,18 @@
     font-size: 20px;
     color: #141B21;
     margin-top: 3%;
+    width: 60%;
     padding: 0;
-    margin-left: 5%;
+    margin-left: 10%;
+    float: left;
+}
+
+.stat-text2 {
+    font-size: 20px;
+    color: #141B21;
+    margin-top: 9%;
+    padding: 0;
+    margin-left: 10%;
     float: left;
 }
 

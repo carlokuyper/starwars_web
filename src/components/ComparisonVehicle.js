@@ -38,13 +38,13 @@ const ComparisonVehicles = () => {
               
               let vehicles = data[i].cargo_capacity;
 
-              for(let i = 0; i < data.length; i++){
+         
                 names.push({
                     key: i,
                     name: data[i].name,
                     url: data[i].url,
                 })
-            }
+            
           }
           setVehicle(names)
           console.log (data)
@@ -100,19 +100,17 @@ const ComparisonVehicles = () => {
   };
 
   const peopleData = {
-    labels: [vehicle1.name + 'Crew', vehicle2.name + 'Crew', vehicle1.name + 'Passengers', vehicle2.name + 'Passengers'],
+    labels: [vehicle1.name, vehicle2.name],
     datasets: [
       {
-        label: '# of Votes',
-        data: [vehicle1.crew, vehicle2.crew, vehicle1.passengers, vehicle2.passengers],
-        backgroundColor: [
-          'blue', 
-          'green',
-          'orange',
-          'purple'
-        ], 
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 0,
+        label: 'Crew',
+        data: [vehicle1.crew, vehicle2.crew,],
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      {
+        label: 'Passengers',
+        data: [vehicle1.passengers, vehicle2.passengers],
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },
     ],
   };

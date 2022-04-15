@@ -63,13 +63,13 @@ const Dashboard = () => {
 
                     <div className="statsCon">
                         <div id="planetIMG"></div>
-                        <p className="stat-text">Planets in the movie {movieInfo.planet}</p>
+                        <p className="stat-text2">Planets in the movie {movieInfo.planet}</p>
                     </div>
 
                     <div className="statsCon">
                         <div id="robotIMG"></div>
                         <p className="stat-text">Characters {movieInfo.character}</p>
-                        <p className="stat-text">{movieInfo.species} Characters Species</p>  
+                        <p className="stat-text">{movieInfo.species} Characters species</p>  
                     </div>      
 
                     <div className="statsCon">

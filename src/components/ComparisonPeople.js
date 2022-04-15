@@ -265,7 +265,7 @@ const ComparisonPeople = () => {
         
             <div className="PInfoCon">
                 
-                <div className="PInfo">
+                <div className="PlanetInfo">
                     <select className="dropDown person1" ref={inputPerson1}onChange={updatePerson1}>
                     {peopleOptions}
                     </select>
@@ -282,7 +282,7 @@ const ComparisonPeople = () => {
                 </div>
                 
                               
-                <div className="PInfo">
+                <div className="PlanetInfo">
                     <select className="dropDown person2" ref={inputPerson2} onChange={updatePerson2}>
                         {peopleOptions}
                     </select>
@@ -296,8 +296,13 @@ const ComparisonPeople = () => {
                     {/* <h3>Fimls : {person2films}</h3> */}
                     {/* <h3>Starships : {person2Starships}</h3>
                     <h3>Vehicles : {person2Vehicles}</h3> */}
+                    
+                    
+
                 </div>
-                
+                <div className="rotationChart">
+                        <Bar data={personData} />
+                    </div>
                 <div className="peopleChart2">
                     <Pie data={filmData} />
                 </div>
@@ -305,9 +310,7 @@ const ComparisonPeople = () => {
             </div>
                 
                 
-                <div className="peopleChart1">
-                    <Bar data={personData} />
-                </div>
+                
                 
         </div>
                 

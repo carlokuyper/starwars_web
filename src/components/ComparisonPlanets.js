@@ -15,8 +15,8 @@ ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 ChartJS.register(  CategoryScale,  LinearScale,  BarElement,  Title,  Tooltip,  Legend);
 
 const ComparisonPlanets = () => {
-    const [planet, setPlanet] = useState([]);
   
+  const [planet, setPlanet] = useState([]);
 
   const inputPlanet1 = useRef();
   const inputPlanet2 = useRef();
@@ -35,17 +35,17 @@ const ComparisonPlanets = () => {
           for(let i = 0; i < data.length; i++){
             let planets = data[i].cargo_capacity;
 
-            for(let i = 0; i < data.length; i++){
               names.push({
                   key: i,
                   name: data[i].name,
                   url: data[i].url,
               })
-            }
+            
           }
           setPlanet(names)
           console.log (data)
       })
+      
   },[])
 
 
@@ -142,7 +142,7 @@ const ComparisonPlanets = () => {
 
     return(
         <div className="comparison-main">
-          <div className="PlanitInfoCon">
+          <div className="PInfoCon">
             <div className="PlanetInfo">
               <select className="dropDown" ref={inputPlanet1}onChange={updatePlanet1}>
                 {planetOptions}
