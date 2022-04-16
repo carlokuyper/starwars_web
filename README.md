@@ -64,7 +64,7 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Home%20Mockup.png]
+![image1](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Home%20Mockup.png)
 
 ### Project Description
 
@@ -126,12 +126,12 @@ Using the StarWars API (SWAPI) and the Charts.JS API I was able to create a seam
 
 For the Timeline Page I used an additional API to pull more information to create the timeline 
 
-![image3][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Timeline%20Mockup.png]
+![image3](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Timeline%20Mockup.png)
 ### Feature 2
 
 Counts the amount of movies each character appears in 
 
-![image4][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/People%20Mockup.png]
+![image4](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/People%20Mockup.png)
 
 
 <!-- CONCEPT PROCESS -->
@@ -145,17 +145,17 @@ The `Conceptual Process` is the process I used to create the final website. I st
 
 Initual Wireframes 
 
-![image5][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/Wireframe%20%20(1).png]
+![image5](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/Wireframe%20%20(1).png)
 
 ### Final UI
 
 Initual Design 
 
-![image6][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/High%20Q%20Wireframe%20%20(1).png]
+![image6](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/High%20Q%20Wireframe%20%20(1).png)
 
 Updated Design 
 
-![image7][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/High%20Q%20Wireframe%20%20(6).png]
+![image7](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/High%20Q%20Wireframe%20%20(6).png)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -201,11 +201,11 @@ Aditionaly featurs that I implementd into the brief.
 
 ### Mockups
 
-![image8][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Home%20Mockup.png]
+![image8](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Home%20Mockup.png)
 
 <br>
 
-![image9][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Vehicle%20Mockup.png]
+![image9](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Vehicle%20Mockup.png)
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
