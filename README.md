@@ -64,7 +64,7 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1][image1]
+![image1][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Home%20Mockup.png]
 
 ### Project Description
 
@@ -73,8 +73,9 @@ A nice introduction to this amazing project of mine.
 ### Built With
 
 * [React](https://reactjs.org/)
-* [Technology Name](path/to/technology/website)
-* [Technology Name](path/to/technology/website)
+* [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
+* [SWAPI](https://swapi.dev/)
+* [OMDB](https://www.omdbapi.com/)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -115,23 +116,22 @@ Run the following in the command-line to install all the required dependencies:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/StarShip%20Mockup.png)
+![image2](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Timeline%20Mockup.png)
 
 ### All The StarWars Data! 
 
 Using the StarWars API (SWAPI) and the Charts.JS API I was able to create a seamless react experience, that is designed to display all the content/information in a user-friendly manner!
 
-![image3][image3]
+### Feature 1
+
+For the Timeline Page I used an additional API to pull more information to create the timeline 
+
+![image3][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Timeline%20Mockup.png]
 ### Feature 2
 
-Description of Feature
+Counts the amount of movies each character appears in 
 
-![image4][image4]
-### Feature 3
-
-Description of Feature
-
-![image5][image5]
+![image4][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/People%20Mockup.png]
 
 
 <!-- CONCEPT PROCESS -->
@@ -143,11 +143,19 @@ The `Conceptual Process` is the process I used to create the final website. I st
 
 ### Wireframes
 
-![image7][image7]
+Initual Wireframes 
+
+![image5][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/Wireframe%20%20(1).png]
 
 ### Final UI
 
-![image8][image8]
+Initual Design 
+
+![image6][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/High%20Q%20Wireframe%20%20(1).png]
+
+Updated Design 
+
+![image7][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Wireframes/High%20Q%20Wireframe%20%20(6).png]
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -193,9 +201,11 @@ Aditionaly featurs that I implementd into the brief.
 
 ### Mockups
 
-![image9][image9]
+![image8][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Home%20Mockup.png]
+
 <br>
-![image10][image10]
+
+![image9][https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/Vehicle%20Mockup.png]
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
