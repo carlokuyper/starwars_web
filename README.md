@@ -16,7 +16,7 @@
 </br>
 <p align="center">
 
-  <a href="https://github.com/MikeMaynard14/termoneexample">
+  <a href="ttps://github.com/carlokuyper/starwars_web">
     <img src="src/img/Artboard 5.png" alt="Logo" width="160" height="160">
   </a>
   
@@ -115,7 +115,7 @@ Run the following in the command-line to install all the required dependencies:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](https://raw.githubusercontent.com/MikeMaynard14/termoneexample/main/src/assets/mockup.jpg)
+![image2](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Mockup/StarShip%20Mockup.png)
 
 ### All The StarWars Data! 
 
