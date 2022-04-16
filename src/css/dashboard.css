@@ -54,22 +54,41 @@
 }
 
 .titleCon{
-    width: 35%;
-    height: 45%;
+    width: 25%;
+    height: 60%;
     padding: 2%;
-    margin-left: 2%;
-    margin-top: 2%;
+    margin-left: 8%;
+    margin-top: 5%;
     background-color: white;
     border-radius: 20px;
     float: left;
 }
 
+.titleCon2{
+    width: 40%;
+    height: 60%;
+    padding: 2%;
+    margin-top: 2.5%;
+    margin-left: 2%;
+    float: left;
+}
+
 .statsCon{
-    width: 28%;
+    width: 80%;
     height: auto;
     padding: 2%;
     margin-left: 2%;
-    margin-top: 2%;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 20px;
+    float: left;
+}
+
+.statsCon2{
+    width: 80%;
+    height: auto;
+    padding: 2%;
+    margin-left: 2%;
     background-color: white;
     border-radius: 20px;
     float: left;

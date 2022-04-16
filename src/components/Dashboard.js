@@ -60,24 +60,24 @@ const Dashboard = () => {
                     </div>
                     
                     <div></div>
+                    <div className="titleCon2">
+                        <div className="statsCon2">
+                            <div id="planetIMG"></div>
+                            <p className="stat-text2">Planets in the movie {movieInfo.planet}</p>
+                        </div>
 
-                    <div className="statsCon">
-                        <div id="planetIMG"></div>
-                        <p className="stat-text2">Planets in the movie {movieInfo.planet}</p>
-                    </div>
+                        <div className="statsCon">
+                            <div id="robotIMG"></div>
+                            <p className="stat-text">Characters {movieInfo.character}</p>
+                            <p className="stat-text">{movieInfo.species} Characters species</p>  
+                        </div>      
 
-                    <div className="statsCon">
-                        <div id="robotIMG"></div>
-                        <p className="stat-text">Characters {movieInfo.character}</p>
-                        <p className="stat-text">{movieInfo.species} Characters species</p>  
-                    </div>      
-
-                    <div className="statsCon">
-                        <div id="shipIMG"></div>
-                        <p className="stat-text">Starships {movieInfo.starships}</p>
-                        <p className="stat-text">Vehicles {movieInfo.vehicles}</p>
+                        <div className="statsCon">
+                            <div id="shipIMG"></div>
+                            <p className="stat-text">Star Ships {movieInfo.starships}</p>
+                            <p className="stat-text">Vehicles {movieInfo.vehicles}</p>
+                        </div>    
                     </div>    
-
                                     
                     
                     

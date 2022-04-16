@@ -17,22 +17,21 @@
 <p align="center">
 
   <a href="https://github.com/MikeMaynard14/termoneexample">
-    <img src="src/img/Artboard 5.png" alt="Logo" width="140" height="140">
+    <img src="src/img/Artboard 5.png" alt="Logo" width="160" height="160">
   </a>
   
-  <h3 align="center">OpenSpace</h3>
+  <h3 align="center">Star Wars Website</h3>
 
   <p align="center">
-    A react project using the Space X Api to demonstrate data visualization using charts js  <br>
-    <i>This However is a template file for DV200 Students!</i> 
-    
+    A react project that uses the Star Wars Api (SWAPI) to visualize information about the films, people, planets, vehicles, etc. by using charts js  <br>
+        
    <br />
    <br />
    <a href="path/to/demonstration/video">View Demo</a>
     ·
-    <a href="https://github.com/MikeMaynard14/termoneexample/issues">Report Bug</a>
+    <a href="https://github.com/carlokuyper/starwars_web/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MikeMaynard14/termoneexample/issues">Request Feature</a>
+    <a href="https://github.com/carlokuyper/starwars_web/issues">Request Feature</a>
 </p>
 <!-- TABLE OF CONTENTS -->
 
@@ -93,12 +92,12 @@ Ensure that you have the latest version of [NPM](https://www.npmjs.com/) install
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/MikeMaynard14/termoneexample.git` into the URL field and press the `Clone` button.
+Enter `https://github.com/carlokuyper/starwars_web.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/MikeMaynard14/termoneexample.git
+   git clone https://github.com/carlokuyper/starwars_web.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
@@ -118,9 +117,9 @@ Run the following in the command-line to install all the required dependencies:
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 ![image2](https://raw.githubusercontent.com/MikeMaynard14/termoneexample/main/src/assets/mockup.jpg)
 
-### All The Latest Space X Data! 
+### All The StarWars Data! 
 
-Usding the Space X API, we have collected and collated all the most relevant Space X data into once seemless react experience!
+Using the StarWars API (SWAPI) and the Charts.JS API I was able to create a seamless react experience, that is designed to display all the content/information in a user-friendly manner!
 
 ![image3][image3]
 ### Feature 2
@@ -140,19 +139,13 @@ Description of Feature
 <!-- here you will add things like wireframing, data structure planning, anything that shows your process. You need to include images-->
 ## Concept Process
 
-The `Conceptual Process` is the set of actions, activities and research that was done when starting this project.
-
-### Ideation
-
-![image5][image5]
-<br>
-![image6][image6]
+The `Conceptual Process` is the process I used to create the final website. I started by looking at multiple examples of what I wanted to create or how I wanted to design the website.  After creating wireframes I got an idea of how I wanted to design the website.  I then went on to implement the functionality of the website, and style the website.
 
 ### Wireframes
 
 ![image7][image7]
 
-### Custom UI
+### Final UI
 
 ![image8][image8]
 
@@ -167,33 +160,33 @@ The `Development Process` is the technical implementations and functionality don
 
 * Utilized React `Charts.JS` dependency for Data visualization
 * Implemented Routing with `React-Router v6`.
-* API End Point: link Here 
-* `Plugin` for this.
-* ETC.
+* Implemented `React Bootstrap`
+* SWAPI End Point: https://swapi.dev/api/
+* OMDB API End Point: https://www.omdbapi.com/?t=A+New+Hope&apikey=5d0c0e4f
+
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* What was good about this project, what did you learn.
-* What aspects did you enjoy.
+* This was a fun and interesting process, although it was a ver intense project to learn and implement react within the given time period. I do believe it was worth it and a very good experience. 
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* Bugs.
-* Bugs.
+* The main challenge was the StarWars API.  
+* At first glance, the API appears to have all the necessary information, but after implementing the API I realized that it does not have all the features, that I would have wanted.  
 
 
 #### Above And Beyond
 
-What aspects of this final build contribute to the `Above And Beyond` Component of your brief?
+Aditionaly featurs that I implementd into the brief.
 <!-- what did you learn outside of the classroom and implement into your project-->
-* Name of Skill Explored.
-* Explain your understanding and execution of above skill.
+* I added an additional API to pull information for the website.
+* I added a feature, that filters through the API tree to act as a counter for some additional information.
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* Future 1.
-* Future 2.
+* For future improvements, I would like to focus more on the visual design. 
+* Additionally I would want to implement more APIs that  will pull relevant content for the StarWars Website
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -212,12 +205,12 @@ To see a run through of the application, click below:
 [View Demonstration](path/to/video/demonstration)
 
 
-See the [open issues](https://github.com/MikeMaynard14/termoneexample/issues) for a list of proposed features (and known issues).
+See the [open issues](ttps://github.com/carlokuyper/starwars_web/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 ## Authors
 
-* **Your Name & Surname** - [MikeMaynard14](https://github.com/MikeMaynard14)
+* **Carlo Kuyper** - [carlokuyper](https://github.com/carlokuyper)
 
 <!-- LICENSE -->
 ## License
@@ -227,16 +220,13 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
-* **Project Link** - https://github.com/MikeMaynard14/termoneexample
+* **Carlo Kuyper** - [carlokuyper@gmail.com](carlokuyper@gmail.com) 
+* **Project Link** - https://github.com/carlokuyper/starwars_web
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 <!-- all resources that you used and Acknowledgements here -->
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
+* [SWAPI](https://swapi.dev/)
+* [OMDB](https://www.omdbapi.com/)
 
 
