@@ -212,7 +212,7 @@ Aditionaly featurs that I implementd into the brief.
 
 To see a run through of the application, click below:
 
-[View Demonstration](path/to/video/demonstration)
+[View Demonstration](https://github.com/carlokuyper/starwars_web/blob/main/src/img/Demo/StarWars%20Demo%20Video.mp4)
 
 
 See the [open issues](ttps://github.com/carlokuyper/starwars_web/issues) for a list of proposed features (and known issues).
